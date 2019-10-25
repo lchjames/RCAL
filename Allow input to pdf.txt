@@ -1,0 +1,4 @@
+sudo chmod -R 0777 /opt/lampp/temp/  
+sudo chown nobody /opt/lampp/temp/  
+sudo chmod -R 0777 /opt/lampp/htdocs/RCAL/pdf/  
+sudo chown nobody /opt/lampp/htdocs/RCAL/pdf/
