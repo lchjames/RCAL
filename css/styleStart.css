@@ -1,0 +1,144 @@
+.box
+{
+    position: relative;
+    width: 1000px;
+    height: 280px;
+    box-sizing: border-box;
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display: flex;
+    transition: 5s;
+    /* rgba(0, 0, 255, 0.3):blue opa */
+    /* #FFF : white*/
+    /* rgba(255,255,255, 0.3):white opa */
+}
+.box .imgBox
+{
+    width: 350px;
+    height: 300px;
+    padding: 30px 0;
+}
+.box .imgBox img
+{
+    max-width: 100%;
+    flex: 0 0 150px;
+}
+.box .content
+{
+    padding-left: 20px;
+}
+.box .content h2
+{
+    margin: 0;
+    padding-left: 0;
+    color: black;
+    font-size: 24px;
+    text-shadow: 0px 0px 10px gold,
+        0px 0px 20px gold,
+        0px 0px 30px gold,
+        0px 0px 40px gold,
+        0px 0px 50px gold,
+        0px 0px 60px gold,
+        0px 0px 70px gold,
+        0px 0px 80px gold,
+        0px 0px 90px gold,
+        0px 0px 100px gold,
+        0px 0px 110px gold,
+        0px 0px 120px gold,
+        0px 0px 130px gold,
+        0px 0px 140px gold;
+}
+.box .content p
+{
+    margin: 0;
+    padding: 10px 0 0;
+    color: white;
+    text-shadow: 0px 0px 10px black,
+        0px 0px 20px black,
+        0px 0px 30px black,
+        0px 0px 40px black,
+        0px 0px 50px black,
+        0px 0px 60px black,
+        0px 0px 70px black,
+        0px 0px 80px black,
+        0px 0px 90px black,
+        0px 0px 100px black,
+        0px 0px 110px black,
+        0px 0px 120px black;
+}
+.container1
+{
+    position: relative;
+    width: 500;
+    padding: 70px 0;
+}
+.container1 .box
+{
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: reveal 1s ease-in-out forwards;
+}
+.container1 .box:before
+{
+    content:'';
+    z-index: 1;
+    animation: reveal 1s reverse forwards;
+    animation-delay: 1s;
+    transform-origin: right;
+}
+@keyframes reveal
+{
+    0%
+    {
+        margin: 0;
+    }
+    0%
+    {
+        transform: scaleX(0);
+    }
+    100%
+    {
+        transform: scaleX(1);
+    }
+}
+.button {
+    top: 80%;
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

@@ -1,0 +1,59 @@
+.container
+{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+.container div
+{
+    position: relative;
+    display: block;
+    float: left;
+    width: 5%;
+    height: 5vh;
+}
+.container div:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/sand.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+    transition: 0.5s linear;
+}
+.container div.flip:before
+{
+    transform: perspective(1000px) rotateX(90deg) translateY(-50%);
+}
+.container div:after
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/treasurehunt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(-90deg) translateY(50%);
+    transition: 0.5s linear;
+}
+.container div.flip:after
+{
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+}

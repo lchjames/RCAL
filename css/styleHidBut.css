@@ -1,0 +1,7 @@
+/* When the screen is less than 600 pixels wide,*/
+@media screen and (max-width: 600px){
+    .button1
+    {
+        visibility: hidden;
+    }
+}

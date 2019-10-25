@@ -1,0 +1,10 @@
+body
+{
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("../images/yellowsquare.png"); 
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
